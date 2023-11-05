@@ -1,1 +1,13 @@
-<h1></h1>
+<h1>Courses</h1>
+
+{%for courses in courses%}
+
+    <h2>{{courses.title}}</h2>
+    <p> {{courses.description}}</p>
+    <img src="{{courses.image.url}}" alt= {{courses.title}}>
+
+    {%if courses.url %}
+    <a href="{{courses.url}}"> {{courses.url }}</a>
+    {%endif %}
+
+{%endfor%}
