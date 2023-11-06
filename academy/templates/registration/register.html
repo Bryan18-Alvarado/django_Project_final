@@ -1,8 +1,37 @@
-<!-- registration/register.html -->
-<h2>Registro</h2>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Registrarse</button>
 
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registro</title>
+    
+    {% load static %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/normalize.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/register.css' %}">
+</head>
+<body>
+    <div class="register-container">
+        <div class="imagen-formulario"></div>
+        
+        <form method="post">
+            {% csrf_token %}
+            <div class="input-container">
+                {{ form.username.label_tag }} {{ form.username }}
+            </div>
+            <div class="input-container">
+                {{ form.password1.label_tag }} {{ form.password1 }}
+            </div>
+            <div class="input-container">
+                {{ form.password2.label_tag }} {{ form.password2 }}
+            </div>
+            <div class="input-submit">
+                <button type="submit">Registrarse</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
