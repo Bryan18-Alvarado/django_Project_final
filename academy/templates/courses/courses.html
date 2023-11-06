@@ -1,12 +1,12 @@
 <h1>Courses</h1>
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 {%for courses in courses%}
 
     <h2>{{courses.title}}</h2>
-    <img src="{{courses.image}}" alt= {{courses.title}}>
+    <img src="{{courses.image.url}}" alt= {{courses.title}}>
     
     {%if courses.url %}
-    <a href="{{courses.url}}">Enter</a>
+    <a class="btn btn-primary" href="{{courses.url}}">Enter</a>
     {%endif %}
 
 {%endfor%}
