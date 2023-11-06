@@ -3,11 +3,10 @@
 {%for courses in courses%}
 
     <h2>{{courses.title}}</h2>
-    <p> {{courses.description}}</p>
-    <img src="{{courses.image.url}}" alt= {{courses.title}}>
-
+    <img src="{{courses.image}}" alt= {{courses.title}}>
+    
     {%if courses.url %}
-    <a href="{{courses.url}}"> {{courses.url }}</a>
+    <a href="{{courses.url}}">Enter</a>
     {%endif %}
 
 {%endfor%}
