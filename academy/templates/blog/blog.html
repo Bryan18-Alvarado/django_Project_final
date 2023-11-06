@@ -1,1 +1,12 @@
 <h1>Blog</h1>
+
+{%for blogs in blogs%}
+
+    <h2>{{blogs.title}}</h2>
+    <img src="{{static.image.url}}" alt= {{blogs.title}}>
+    
+    {%if blogs.url %}
+    <a href="{{blogs.url}}">Enter</a>
+    {%endif %}
+
+{%endfor%}
