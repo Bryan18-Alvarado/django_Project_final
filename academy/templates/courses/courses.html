@@ -1,13 +1,32 @@
-{%load static  %}
-<h1 class="page-title">Courses</h1>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-{%for courses in courses%}
-    <h2 class="titulo" class="border border-primary"> {{courses.title}} </h2>
+    <title>Courses</title>
+    {% load static %}
     <link rel="stylesheet" href="{% static "styles/styles.css" %}">
-    <img class='image-tama' src="{{courses.image.url}}" alt= {{courses.title}}>
-    {%if courses.url %}
-    <a class="btn btn-primary" href="{{courses.url}}">Enter</a>
-    {%endif %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<h1  style='color:white'> Courses</h1>
+<body style="background-color: black;"> <!-- Agregar el estilo de fondo negro al body -->
 
-{%endfor%}
+<div class="row">
+    {% for course in courses %}
+        <div class="col-md-4" style="margin-bottom: 10px;"> <!-- Agregar un margen inferior para la distancia mínima -->
+            <div class="card text-center">
+                <div class="d-flex justify-content-center align-items-center" style="height: 78px;">
+                    <h2 class="card-title">{{ course.title }}</h2>
+                </div>
+                <div class="d-flex justify-content-center align-items-center" style="height: 68px;"> <!-- Reducir la altura de la imagen -->
+                    <img src="{{ course.image.url }}" alt="{{ course.title }}" class="card-img-top" style="width: 78px; height: 68px;"> <!-- Ajustar la altura de la imagen aquí -->
+                </div>
+                <div class="card-body">
+                    {% if course.url %}
+                        <div class="d-flex justify-content-center">
+                            <a class="btn btn-primary" href="{{ course.url }}">Enter</a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+</body>
