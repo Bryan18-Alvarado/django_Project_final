@@ -1,0 +1,16 @@
+body{
+    background-color: black;
+}
+
+.page-header, .page-title{
+    color: white;
+}
+
+.titulo{
+    color: white;
+}
+
+.image-tama{
+    width: 78px;
+        height: 86px;
+}
