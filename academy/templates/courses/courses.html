@@ -1,10 +1,11 @@
-<h1>Courses</h1>
+{%load static  %}
+<h1 class="page-title">Courses</h1>
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 {%for courses in courses%}
-
-    <h2>{{courses.title}}</h2>
-    <img src="{{courses.image.url}}" alt= {{courses.title}}>
-    
+    <h2 class="titulo" class="border border-primary"> {{courses.title}} </h2>
+    <link rel="stylesheet" href="{% static "styles/styles.css" %}">
+    <img class='image-tama' src="{{courses.image.url}}" alt= {{courses.title}}>
     {%if courses.url %}
     <a class="btn btn-primary" href="{{courses.url}}">Enter</a>
     {%endif %}
