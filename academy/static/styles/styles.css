@@ -3,4 +3,39 @@ body{
     color: black;
 }
 
+.title-blog, .title-courses, .title-documentation{
+    color: #FFF;
+text-align: left;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 30px;
+font-style: impact;
+font-weight: 800;
+top: 10;
+  left: 10;
+}
 
+.marlinis {
+    position: absolute;
+    text-align: right; /* Alineación a la derecha */
+    font-family: impact;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 500;
+    top: 0;
+    right: 20px; /* Ajustar la propiedad right en lugar de left */
+  }
+  
+.academy{
+    position: absolute;
+    font-family: Impact;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 500;
+    text-align: right;
+    top: 37px; /* Ajusta la posición vertical según tus necesidades */
+    right: 25px;
+}
+
+#cont{
+    top: 50px;
+}

@@ -61,7 +61,7 @@ def blog(request):
     return render(request, 'blog/blog.html', {'blogs':blogs})
 
 def documentation(request):
-    documentations = Documentation.objects.all()
+    documentation = Documentation.objects.all()
     return render (request, 'documentation/documentation.html', {'documentations': documentation})
 
 def contact_us(request):
