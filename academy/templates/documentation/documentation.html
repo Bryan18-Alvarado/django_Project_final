@@ -1,1 +1,36 @@
-<h1>DOCUMENTATION</h1>
+<title>Documentation</title>
+
+{% load static %}
+<link rel="stylesheet" href="{% static "styles/styles.css" %}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<h1 class="title-documentation"  style='color:white'>Documentation</h1> 
+<h1  class='marlinis' style='color:yellow'>MARLINIS<h1/>
+<h1  class='academy' style='color:blue'>ACADEMY<h1/>   
+
+<body style="background-color: black;"> <!-- Agregar el estilo de fondo negro al body -->
+
+<div class="row">
+{% for documentation in documentations %}
+    <div id='cont' class="col-md-4 " style="margin-bottom: 20px;"> <!-- Agregar un margen inferior para la distancia mínima -->
+        <div class="card text-center">
+            <div class="d-flex justify-content-center align-items-center" style="height: 78px;  font-family:impact">
+                <h2 class="card-title">{{ documentation.title }}</h2>
+            </div>
+            <div class="d-flex justify-content-center align-items-center" style="height: 68px;"> <!-- Reducir la altura de la imagen -->
+                <img src="{{ documentation.image.url }}" alt="{{ documentation.title }}" class="card-img-top" style="width: 78px; height: 68px;"> <!-- Ajustar la altura de la imagen aquí -->
+            </div>
+            <div class="card-body">
+                {% if documentation.url %}
+                    <div class="d-flex justify-content-center">
+                        <a class="btn btn-primary" href="{{ documentation.url }}">Ingresar</a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endfor %}
+</div>
+
+</body>
