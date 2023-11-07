@@ -28,7 +28,7 @@ class Documentation(models.Model):
 class Contact_us(models.Model):
     title = models.CharField(max_length=100)
     description = models.CharField(max_length=250)
-    url= models.URLField(blank=True)
+    image= models.ImageField (default='default_image.jpg')
     
     def  __str__(self):
         return self.title   
