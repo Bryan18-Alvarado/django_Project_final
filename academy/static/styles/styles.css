@@ -39,3 +39,38 @@ top: 10;
 #cont{
     top: 50px;
 }
+
+.navbar{
+    position: absolute;
+    text-align: left; /* Alineación a la derecha */
+    font-size: 22px;
+    font-weight: 500;
+    font-style: italic;
+    top: 0;
+    right: 0px;
+
+}
+.index-logo {
+    color: #FFF;
+    text-align: left;
+    font-family: Inter;
+    font-size: 70px;
+    font-style: italic;
+    font-weight: 800;
+    position: absolute;
+    top: 50%;
+    right: 1350px;
+    transform: translateY(-50%);
+  }
+
+.marlinis-index{
+    color: #FFF;
+    text-align: left;
+    font-family: Inter;
+    font-size: 70px;
+    font-style: italic;
+    font-weight: 800;
+    position: absolute;
+    top: 50%;
+    transform: translateY(20%);
+}

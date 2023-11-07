@@ -13,37 +13,42 @@
         
     </head>
     <body>
-        <h1 class="page-header">Home</h1>
+        
+        <h1 style='color: white; font-family:impact' class="page-header">Home</h1>
+        <div>
+            <h1  class='index-logo' style='color:yellow'>MARLINIS<h1/>
+            <h1  class='marlinis-index' style='color:blue'>ACADEMY<h1/>  
+        </div>
         
         <nav class="navbar">
-            <ul>
+            <ul class="nav">
                
 
-                <li>
+                <li  class="nav-item m-2">
                     
-                    <a href="{% url 'courses' %}" class="btn btn-primary">Courses</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'courses' %}" style='color: white'>Courses</a>
                 </li>
 
-                <li>
-                    <a href="{% url 'blog' %}" class="btn btn-primary">Blogs</a>
+                <li class="nav-item m-2">
+                    <a class="nav-link" href="{% url 'blog' %}" style='color: white'>Blogs</a>
                 </li>
 
-                <li>
-                    <a href="{% url 'documentation' %}" class="btn btn-primary">Documentation</a>
+                <li class="nav-item m-2">
+                    <a class="nav-link" href="{% url 'documentation' %}" style='color: white'>Documentation</a>
                 </li>
-                <li>
-                    <a href="{% url 'contact_us' %}" class="btn btn-primary">Contact Us</a>
+                <li class="nav-item m-2">
+                    <a class="nav-link" href="{% url 'contact_us' %}" style='color: white'>Contact us</a>
                 </li>
             
-                <li>
-                    <a href="{% url 'custom_login' %}" >cerrar sesion</a>
+                <li class="nav-item m-2">
+                    <a class="nav-link" href="{% url 'custom_login' %}" type='button'  class="btn btn-danger" style='color: red'>Go out</a>
                 </li>
             </ul>
         </nav>
         
         <main class="container">  
             {%block content%}
-        
+            
             {%endblock%}
         </main>      
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
